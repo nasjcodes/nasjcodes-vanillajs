@@ -1,7 +1,7 @@
-let footer = `
-  <footer class="footer">
+let footer = /*html*/`
+  <footer class="bg-dark">
     <div class="container">
-      <span class="text-muted">nasjcodes</span>
+      &copynasjcodes
     </div>
   </footer>
 `;

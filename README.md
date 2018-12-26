@@ -1,20 +1,40 @@
 # nasjcodes.github.io
-My website used to show and track my progress in Software Development. Since I am still in the process of developing the website, I will be noting down my progress in this file
+This site is used to show and track my progress in Software Development.
 
-## Java
-I started learning Java through the University of Helsinki's MOOC (Both [Part 1](http://moocfi.github.io/courses/2013/programming-part-1/) and [Part 2](http://moocfi.github.io/courses/2013/programming-part-2/)). This course has solidified my foundation in Object-Oriented Programming.
+## Description
+Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to create a basic website as a platform to showcase my projects first. Based on my basic understanding of web development, most modern web sites are built using established frameworks such as React or Ruby on rails, Angular JS etc. However, creating a website using Vanilla JS as a learning experience is widely recommended to solidify one's understanding of the background processes.
 
-## Android
-I have (only) made 2 Android applications so far, and obviously have a lot more to learn. However, these are some things that I noted to improve on based on the 2 applications:
-* Themes/Styles/Layouts. I have been using the default themes and styles for both applications. I could probably learn to get a consistent theme throughout the application, as well as programatically generate layouts.
-* Fragments. I have only used 1 Fragment so far, and could probably learn to use them more frequently for better UX.
-* Resolve bugs and add improvements to the current applications. This includes "perfecting" the UX by standardizing animations etc.
+## Challenges
+I have listed down some of the main challenges and decisions I had to make while creating this website.
 
-### QuoteBook ([Link](https://github.com/nasjcodes/android-quotebook))
-Quotebook is a basic Android application that loops through a list of quotes. I mostly followed [this](https://www.reddit.com/r/Android/comments/2tpjep/the_new_step_by_step_guide_detailing_how_to_get/) reddit thread.
+### Style
+Although CSS styling is relatively simple, I decided to make use of [Bootstrap](https://getbootstrap.com/) as a quick and easy way to style the site. This allowed me to focus more on the functional details of the site using JavaScript. In the future, I will style the website without the use of Bootstrap.
 
-### Snake Mobile ([Link](https://github.com/nasjcodes/snake-mobile))
-To better understand the interactions and functions of Android compared to Java, I decided to port the [Worm Game](https://materiaalit.github.io/2013-oo-programming/part2/week-12/) (Exercise 49) from the University of Helsinki's MOOC.
+### Traditional VS Single Page Application (SPA)
+Through my research on making websites, I gathered that there are 2 basic types of web pages:
+1. Traditional website - Every web page has its own html file, starting with "index.html" as the root. A template engine is often used to generate the html files.
+2. Single Page Application - A single "index.html" file is used as the base, and pages are loaded/unloaded using a router in JavaScript.
 
-## Web
-To build a strong foundation in understand web programming, I decided to look at various resources following [Andrei Neagoie's](https://hackernoon.com/learn-to-code-in-2018-get-hired-and-have-fun-along-the-way-b338247eed6a) "guide". This included the well known [CS50 Course from Harvard](https://www.youtube.com/watch?v=y62zj9ozPOM&list=PLhQjrBD2T3828ZVcVzEIhsHVgjANGZveu). I plan to continue using Andrei Neagoie's guide.
+Given that SPAs are mostly rendered client side, they are usually recommended for smaller websites as they provide a faster UX. The downsides of SPAs are longer initial load times (given the amount of .js files) and that users may not have JavaScript enabled. The latter problem may be solved by server-side rendering of components. The current iteration of the website is a basic SPA and does not have server-side rendering yet.
+
+### Navigation
+For my initial commit, I implemented site navigation using a hashchange event listener to switch pages. Although this was relatively simple, I found several issues that would affect the UX:
+* I wanted to clean up the url by replacing /#/page_name with /page_name. This meant using window.history.replaceState to update the url. However, there was still a split second where the user could see the "#/" in the url.
+* My implementation of hashchange combined with replaceState caused the page to fully reload (i.e. load index.html again) if the url started with "/".
+
+After this, I found a seemingly better implementation of navigation using onclick. Each navigation link would call a function onclick and return false so that the browser does not direct to that link. This allowed the page to be loaded without changing the url. Browser history is added using window.history.pushState instead of window.history.replaceState.
+
+### Redirects
+Given that the entire website is technically using only "/index.html", I needed a way to navigate back to "/index.html" even if the user inputs "/page_name" in the url. Since this input will give a page not found error, I created a a [Custom 404.html page](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/). This page ran a simple script that took the pathname ("/page_name") entered by the user and redirects to the root with a search string containing the pathname ("/?redirect=page_name"). Using window.location.search, the correct page can be loaded after redirecting.
+
+## TO-DO
+* Style website with my own CSS stylesheet instead of relying on Bootstrap.
+* Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
+* Possibly use the GitHub API to programatically get repository details.
+* Optimize loading times via lazy loading.
+
+## Resources
+I relied on 3 main pages as a reference for my SPA
+[1](https://github.com/FermiDirak/fermidirak.github.io) - Uses onclick for better navigation.
+[2](https://github.com/w3cj/front-end-face-off-vanilla-js) - Uses MVC concept and has a more robust implementation of page component loading. I can still reference this for more improvements.
+[3](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng) - Uses the async function to load pages on demand. I have not implemented this.

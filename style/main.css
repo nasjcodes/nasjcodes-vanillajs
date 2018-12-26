@@ -1,28 +1,44 @@
-/* Sticky footer styles
--------------------------------------------------- */
+/* Reset all margins/padding to 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  background-color: rgb(240, 240, 240);
 }
-.footer {
+
+main {
+  margin: 0 auto;
+  width: 85%;
+  max-width: 800px;
+
+}
+
+header {
+  padding: 30px 0px;
+}
+
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  height: 30px; /* Set the fixed height of the footer here */
+  line-height: 30px; /* Vertically center the text there */
+  color: rgb(150, 150, 150);
 }
 
+#projects a, #projects a:hover, #projects a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-.container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
+a:hover {
+  text-decoration: none;
 }

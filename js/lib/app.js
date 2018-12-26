@@ -1,43 +1,58 @@
 class App {
 
   constructor() {
-
-  }
-
-  // Render Header and footer
-  loadComponents() {
-    this.header = null || document.getElementById("header_content");
-    this.footer = null || document.getElementById("footer_content");
-
-    this.header.innerHTML = navbar;
-    this.footer.innerHTML = footer;
-
-  }
-
-  loadPage(url) {
+    this.navbar = null || document.getElementById("navbar");
+    this.footer = null || document.getElementById("footer");
     this.content = null || document.getElementById("main_content");
 
-    if(routes[url] === undefined) {
-      this.content.innerHTML = routes["/error"];
-
-      // Hide redirect information after moving to error page
-      if(this.isRedirect() === true) {
-        window.history.replaceState({}, "", url);
-      }
-
-      document.title = "Error ):";
-
-    } else {
-      this.content.innerHTML = routes[url];
-      window.history.replaceState({}, "", url);
-      this.setDocTitle(url);
+    const loadAndRoute = () => {
+      this.loadComponents();
+      this.route(window.location.pathname);
     }
 
+    // Load components and content once DOM is loaded
+    document.addEventListener("DOMContentLoaded", loadAndRoute);
+
+    // Forward and back buttons
+    window.addEventListener("popstate", () => {
+      this.loadPage(window.location.pathname, true);
+    });
   }
 
-  isRedirect() {
+  // Render navbar and footer
+  loadComponents() {
+    this.navbar.innerHTML = navbar;
+    this.footer.innerHTML = footer;
+  }
+
+  route(request) {
+    // Checks if ?redirent=___ is present in url
+    // Attemps to load the respective page
     var urlParams = new URLSearchParams(window.location.search);
-    return urlParams.has("redirect");
+    if(urlParams.has("redirect")) {
+      this.loadPage(urlParams.get("redirect"), true);
+    } else {
+      this.loadPage(request, false);
+    }
+  }
+
+  loadPage(page, isRedirect) {
+    // Display error page if not found
+    if(routes[page] === undefined) {
+      this.content.innerHTML = error;
+      document.title = "Error";
+    } else {
+      this.content.innerHTML = routes[page]; // Displays the page view
+      this.setDocTitle(page);
+    }
+
+    // Makes the url "nice"
+    if(isRedirect || window.location.pathname === page) {
+      window.history.replaceState({}, "", page);
+    } else {
+      window.history.pushState({}, "", page);
+    }
+
   }
 
   setDocTitle(url) {

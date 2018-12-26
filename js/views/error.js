@@ -1,3 +1,0 @@
-let error = `
-  oh no!
-`;

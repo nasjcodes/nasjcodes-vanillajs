@@ -2,6 +2,7 @@
 let routes = {
   "/"           : home,
   "/index.html" : home,
+  "/about"      : about,
   "/projects"   : projects,
   "/error"      : error,
 }
