@@ -37,6 +37,9 @@ class App {
   }
 
   loadPage(page, isRedirect) {
+    // Collapse nav bar
+    this.collapseBar();
+
     // Display error page if not found
     if(routes[page] === undefined) {
       this.content.innerHTML = error;
@@ -63,6 +66,10 @@ class App {
       title += " | " + url;
     }
     document.title = title;
+  }
+
+  collapseBar() {
+    $('.collapse').collapse('hide');
   }
 
 }
