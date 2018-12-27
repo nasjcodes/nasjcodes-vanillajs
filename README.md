@@ -1,5 +1,5 @@
 # nasjcodes.github.io
-This site is used to show and track my progress in Software Development.
+This site is used to show and track my progress in Software Development. Click [here](https://nasjcodes.github.io) to check it out!
 
 ## Description
 Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to create a basic website as a platform to showcase my projects first. Based on my basic understanding of web development, most modern web sites are built using established frameworks such as React or Ruby on rails, Angular JS etc. However, creating a website using Vanilla JS as a learning experience is widely recommended to solidify one's understanding of the background processes.
@@ -32,6 +32,8 @@ Given that the entire website is technically using only "/index.html", I needed 
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
 * Possibly use the GitHub API to programatically get repository details.
 * Optimize loading times via lazy loading.
+* Add ability to jump to id (#) of page.
+* Add ability for links to have children (/projects/project1).
 
 ## Resources
 I relied on 3 main pages as a reference for my SPA
