@@ -1,5 +1,10 @@
 body {
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 55px auto 30px; /* navbar-content-footer */
   background-color: rgb(240, 240, 240);
+  --bar-color: #31353d;
 }
 
 main {
@@ -8,24 +13,48 @@ main {
   max-width: 800px;
 }
 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: var(--bar-color);
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-name {
+  color: white;
+  font-size: 20px;
+}
+
+.nav-item {
+  color: #cacaca;
+  font-size: 16px;
+}
+
+#navlinks ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
 header {
   padding: 30px 0px;
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  background-color: var(--bar-color);
   width: 100%;
-  height: 30px; /* Set the fixed height of the footer here */
-  line-height: 30px; /* Vertically center the text there */
-  color: rgb(150, 150, 150);
+  line-height: 30px;
+  color: #969696;
 }
 
 #projects a, #projects a:hover, #projects a:visited {
   color: inherit;
-  text-decoration: none;
 }
 
-a:hover {
+a, a:hover {
   text-decoration: none;
 }

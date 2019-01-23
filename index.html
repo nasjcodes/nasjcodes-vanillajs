@@ -8,41 +8,41 @@
     <!-- Sanitize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css" rel="stylesheet">
 
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="style/main.css" rel="stylesheet">
+
     <title>nasjcodes</title>
   </head>
   <body>
     <!-- navbar -->
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav id="navbar">
+      <a class="nav-link nav-name" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/about" onclick="app.route('/about'); return false;">About<span class="sr-only">(current)</span></a>
+      <div id="navlinks">
+        <ul>
+          <li>
+            <a class="nav-link nav-item" href="/about" onclick="app.route('/about'); return false;">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projects" onclick="app.route('/projects'); return false;">Projects</a>
+          <li>
+            <a class="nav-link nav-item" href="/projects" onclick="app.route('/projects'); return false;">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="/wrongLink">Disabled</a>
+          <li>
+            <a class="nav-link nav-item" href="/wrongLink">Disabled</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="d-flex justify-content-center">
+    <div id="content" class="d-flex justify-content-center">
       <!-- content -->
       <div id="main_content">Loading...</div>
     </div>
+
     <!-- footer -->
-    <footer id="footer" class="bg-dark">
-      <div class="container">
-        &copynasjcodes
-      </div>
+    <footer id="footer">
+      &copynasjcodes
     </footer>
 
     <!-- load components before main app -->
