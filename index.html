@@ -20,15 +20,14 @@
     <nav id="navbar">
       <a class="nav-name" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
 
-      <div id="menu">
-        <div>
-          <div class="menu-line"></div>
-          <div class="menu-line"></div>
-          <div class="menu-line"></div>
-        </div>
+      <div id="menu" onclick="toggleMenu(this)">
+        <div class="menu-line line1"></div>
+        <div class="menu-line line2"></div>
+        <div class="menu-line line3"></div>
       </div>
 
 
+      <div id="navlinks">
         <a class="nav-link" href="/about" onclick="app.route('/about'); return false;">
           <div class="nav-text">About</div>
         </a>
@@ -38,6 +37,7 @@
         <a class="nav-link" href="/wrongLink">
           <div class="nav-text">Disabled</div>
         </a>
+      </div>
 
     </nav>
 
