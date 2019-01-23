@@ -19,11 +19,12 @@ class App {
     });
   }
 
+  // TODO: delete
   // Render navbar and footer
-  loadComponents() {
-    this.navbar.innerHTML = navbar;
-    this.footer.innerHTML = footer;
-  }
+  // loadComponents() {
+  //   this.navbar.innerHTML = navbar;
+  //   this.footer.innerHTML = footer;
+  // }
 
   route(request) {
     // Checks if ?redirent=___ is present in url
@@ -37,8 +38,7 @@ class App {
   }
 
   loadPage(page, isRedirect) {
-    // Collapse nav bar
-    this.collapseBar();
+    // TODO: Collapse nav bar
 
     // Display error page if not found
     if(routes[page] === undefined) {
@@ -68,10 +68,4 @@ class App {
     document.title = title;
   }
 
-  collapseBar() {
-    $('.collapse').collapse('hide');
-  }
-
 }
-
-
