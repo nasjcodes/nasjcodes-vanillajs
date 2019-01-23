@@ -18,27 +18,31 @@
   <body>
     <!-- navbar -->
     <nav id="navbar">
-      <a class="nav-link nav-name" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
+      <a class="nav-name" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
 
-      <div id="navlinks">
-        <ul>
-          <li>
-            <a class="nav-link nav-item" href="/about" onclick="app.route('/about'); return false;">About</a>
-          </li>
-          <li>
-            <a class="nav-link nav-item" href="/projects" onclick="app.route('/projects'); return false;">Projects</a>
-          </li>
-          <li>
-            <a class="nav-link nav-item" href="/wrongLink">Disabled</a>
-          </li>
-        </ul>
+      <div id="menu">
+        <div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </div>
       </div>
+
+
+        <a class="nav-link" href="/about" onclick="app.route('/about'); return false;">
+          <div class="nav-text">About</div>
+        </a>
+        <a class="nav-link" href="/projects" onclick="app.route('/projects'); return false;">
+          <div class="nav-text">Projects</div>
+        </a>
+        <a class="nav-link" href="/wrongLink">
+          <div class="nav-text">Disabled</div>
+        </a>
+
     </nav>
 
-    <div id="content" class="d-flex justify-content-center">
-      <!-- content -->
-      <div id="main_content">Loading...</div>
-    </div>
+    <!-- content -->
+    <div id="main_content">Loading...</div>
 
     <!-- footer -->
     <footer id="footer">
