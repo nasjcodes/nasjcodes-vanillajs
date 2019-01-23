@@ -8,7 +8,7 @@ class App {
     const loadAndRoute = () => {
       // this.loadComponents();
       this.route(window.location.pathname);
-    }
+    };
 
     // Load components and content once DOM is loaded
     document.addEventListener("DOMContentLoaded", loadAndRoute);
@@ -38,7 +38,12 @@ class App {
   }
 
   loadPage(page, isRedirect) {
-    // TODO: Collapse nav bar
+    // Collapse nav bar
+    let menuElem = document.getElementById('menu');
+
+    if (menuElem.classList.contains('change')) {
+      toggleMenu(menuElem);
+    }
 
     // Display error page if not found
     if(routes[page] === undefined) {
@@ -55,7 +60,6 @@ class App {
     } else {
       window.history.pushState({}, "", page);
     }
-
   }
 
   setDocTitle(url) {
@@ -67,5 +71,4 @@ class App {
     }
     document.title = title;
   }
-
 }
