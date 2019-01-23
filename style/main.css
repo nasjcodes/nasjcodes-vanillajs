@@ -83,7 +83,6 @@ main {
 .change .nav-link {
   display: inline;
 }
-
 /* --------------- */
 
 #navlinks {
@@ -145,19 +144,30 @@ a, a:hover {
   text-decoration: none;
 }
 
+/* Reference for device sizes taken from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* Medium devices */
 @media only screen and (min-width: 600px) {
   #navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+  }
+
+  .nav-name {
+    padding: 0 25px;
   }
 
   #menu {
     display: none;
   }
 
+  #navlinks {
+    display: flex;
+    justify-content: center;
+  }
+
   .nav-link {
     display: inline;
+    padding: 0 25px;
   }
 
   #main_content, #footer {
@@ -167,8 +177,8 @@ a, a:hover {
 
 /* Large devices */
 @media only screen and (min-width: 992px) {
-  .nav-name {
-    margin-right: auto;
+  #navbar {
+    justify-content: space-between;
   }
 
   .nav-link {
