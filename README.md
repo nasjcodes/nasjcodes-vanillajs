@@ -7,8 +7,10 @@ Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to c
 ## Challenges
 I have listed down some of the main challenges and decisions I had to make while creating this website.
 
-### Style
-Although CSS styling is relatively simple, I decided to make use of [Bootstrap](https://getbootstrap.com/) as a quick and easy way to style the site. This allowed me to focus more on the functional details of the site using JavaScript. In the future, I will style the website without the use of Bootstrap.
+### Style (Updated 23 Jan 2019)
+I have styled the webpage from scratch without the help of Boostrap.
+
+~~Although CSS styling is relatively simple, I decided to make use of [Bootstrap](https://getbootstrap.com/) as a quick and easy way to style the site. This allowed me to focus more on the functional details of the site using JavaScript. In the future, I will style the website without the use of Bootstrap.~~
 
 ### Traditional VS Single Page Application (SPA)
 Through my research on making websites, I gathered that there are 2 basic types of web pages:
@@ -28,12 +30,12 @@ After this, I found a seemingly better implementation of navigation using onclic
 Given that the entire website is technically using only "/index.html", I needed a way to navigate back to "/index.html" even if the user inputs "/page_name" in the url. Since this input will give a page not found error, I created a a [Custom 404.html page](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/). This page ran a simple script that took the pathname ("/page_name") entered by the user and redirects to the root with a search string containing the pathname ("/?redirect=page_name"). Using window.location.search, the correct page can be loaded after redirecting.
 
 ## TO-DO
-* Style website with my own CSS stylesheet instead of relying on Bootstrap.
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
 * Possibly use the GitHub API to programatically get repository details.
 * Optimize loading times via lazy loading.
 * Add ability to jump to id (#) of page.
 * Add ability for links to have children (/projects/project1).
+* ~~Style website with my own CSS stylesheet instead of relying on Bootstrap.~~
 
 ## Resources
 I relied on 3 main pages as a reference for my SPA
