@@ -6,7 +6,7 @@ class App {
     this.content = null || document.getElementById("main_content");
 
     const loadAndRoute = () => {
-      this.loadComponents();
+      // this.loadComponents();
       this.route(window.location.pathname);
     }
 
