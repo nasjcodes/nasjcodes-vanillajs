@@ -1,10 +1,10 @@
-let projects = `
+let projects = /* html */`
   <header>
     <h1 id="title">Projects</h1>
   </header>
-  
+
   <main id="projects">
-    
+
     <h2 id="webdev">Web Development</h2>
     <ul>
       <li><h4><a href="https://github.com/nasjcodes/nasjcodes.github.io">nasjcodes.github.io (This website)</a></h4>

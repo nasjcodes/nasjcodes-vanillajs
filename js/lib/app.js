@@ -1,9 +1,8 @@
 class App {
-
   constructor() {
-    this.navbar = null || document.getElementById("navbar");
-    this.footer = null || document.getElementById("footer");
-    this.content = null || document.getElementById("main_content");
+    this.navbar = null || document.getElementById('navbar');
+    this.footer = null || document.getElementById('footer');
+    this.content = null || document.getElementById('main_content');
 
     const loadAndRoute = () => {
       // this.loadComponents();
@@ -11,10 +10,10 @@ class App {
     };
 
     // Load components and content once DOM is loaded
-    document.addEventListener("DOMContentLoaded", loadAndRoute);
+    document.addEventListener('DOMContentLoaded', loadAndRoute);
 
     // Forward and back buttons
-    window.addEventListener("popstate", () => {
+    window.addEventListener('popstate', () => {
       this.loadPage(window.location.pathname, true);
     });
   }
@@ -29,9 +28,9 @@ class App {
   route(request) {
     // Checks if ?redirent=___ is present in url
     // Attemps to load the respective page
-    var urlParams = new URLSearchParams(window.location.search);
-    if(urlParams.has("redirect")) {
-      this.loadPage(urlParams.get("redirect"), true);
+    let urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('redirect')) {
+      this.loadPage(urlParams.get('redirect'), true);
     } else {
       this.loadPage(request, false);
     }
@@ -46,28 +45,29 @@ class App {
     }
 
     // Display error page if not found
-    if(routes[page] === undefined) {
+    if (routes[page] === undefined) {
       this.content.innerHTML = error;
-      document.title = "Error";
+      document.title = 'Error';
     } else {
       this.content.innerHTML = routes[page]; // Displays the page view
-      this.setDocTitle(page);
+      App.setDocTitle(page);
     }
 
     // Makes the url "nice"
-    if(isRedirect || window.location.pathname === page) {
-      window.history.replaceState({}, "", page);
+    if (isRedirect || window.location.pathname === page) {
+      window.history.replaceState({}, '', page);
     } else {
-      window.history.pushState({}, "", page);
+      window.history.pushState({}, '', page);
     }
   }
 
-  setDocTitle(url) {
-    url = url.substring(1);
-    var title = "nasjcodes";
+  // Use static because 'this' is not used
+  static setDocTitle(url) {
+    let pageName = url.substring(1);
+    let title = 'nasjcodes';
 
-    if(url !== "") {
-      title += " | " + url;
+    if (url !== '') {
+      title += ` |  ${pageName}`;
     }
     document.title = title;
   }

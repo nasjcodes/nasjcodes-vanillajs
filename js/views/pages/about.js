@@ -1,4 +1,4 @@
-let about = `
+let about = /* html */`
   <header>
     <h1 id="title">About</h1>
   </header>
