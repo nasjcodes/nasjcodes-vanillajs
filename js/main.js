@@ -10,8 +10,8 @@ import error from './views/pages/error.js';
 import toggleMenu from './lib/togglemenu.js';
 
 window.toggleMenu = toggleMenu;
-const app = new App();
 
+const app = new App();
 app.addRoutes(
   ['/', home],
   ['/index.html', home],
@@ -19,3 +19,6 @@ app.addRoutes(
   ['/projects', projects],
   ['/error', error],
 );
+
+// Load content once DOM is loaded
+document.addEventListener('DOMContentLoaded', app.route.call(app, window.location.pathname));

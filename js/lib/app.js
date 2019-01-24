@@ -3,17 +3,10 @@ import toggleMenu from './togglemenu.js';
 class App {
   constructor() {
     this.routes = {};
-    this.navbar = null || document.getElementById('navbar');
-    this.footer = null || document.getElementById('footer');
-    this.content = null || document.getElementById('main_content');
-
-    const loadAndRoute = () => {
-      // this.loadComponents();
-      this.route(window.location.pathname);
-    };
-
-    // Load components and content once DOM is loaded
-    document.addEventListener('DOMContentLoaded', loadAndRoute);
+    // TODO: delete
+    // this.navbar = document.getElementById('navbar');
+    // this.footer = document.getElementById('footer');
+    this.content = document.getElementById('main_content');
 
     // Forward and back buttons
     window.addEventListener('popstate', () => {
@@ -39,7 +32,7 @@ class App {
   }
 
   route(request) {
-    // Checks if ?redirent=___ is present in url
+    // Checks if ?redirect=___ is present in url
     // Attemps to load the respective page
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('redirect')) {
@@ -49,37 +42,44 @@ class App {
     }
   }
 
-  loadPage(page, isRedirect) {
-    // Collapse nav bar
-    const menuElem = document.getElementById('menu');
+  loadPage(link, isRedirect) {
+    App.collapseNavBar();
+    this.displayPage(link);
+    App.setUrl(link, isRedirect);
+  }
 
-    if (menuElem.classList.contains('change')) {
-      toggleMenu(menuElem);
-    }
-
-    // Display error page if not found
-    if (this.routes[page] === undefined) {
+  displayPage(link) {
+    if (this.routes[link] === undefined) {
+      // Display error page if not found
       this.content.innerHTML = this.routes['/error'];
       document.title = 'Error';
     } else {
-      this.content.innerHTML = this.routes[page]; // Displays the page view
-      App.setDocTitle(page);
+      this.content.innerHTML = this.routes[link];
+      App.setDocTitle(link);
     }
+  }
 
-    // Makes the url "nice"
-    if (isRedirect || window.location.pathname === page) {
-      window.history.replaceState({}, '', page);
+  static collapseNavBar() {
+    const menuElem = document.getElementById('menu');
+    if (menuElem.classList.contains('change')) {
+      toggleMenu(menuElem);
+    }
+  }
+
+  static setUrl(link, isRedirect) {
+    if (isRedirect || window.location.pathname === link) {
+      window.history.replaceState({}, '', link);
     } else {
-      window.history.pushState({}, '', page);
+      window.history.pushState({}, '', link);
     }
   }
 
   // Use static because 'this' is not used
-  static setDocTitle(url) {
-    const pageName = url.substring(1);
+  static setDocTitle(link) {
+    const pageName = link.substring(1);
     let title = 'nasjcodes';
 
-    if (url !== '') {
+    if (link !== '') {
       title += ` |  ${pageName}`;
     }
     document.title = title;
