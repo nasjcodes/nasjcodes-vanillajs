@@ -1,7 +1,6 @@
-import routes from './routes.js';
-
 class App {
   constructor() {
+    this.routes = {};
     this.navbar = null || document.getElementById('navbar');
     this.footer = null || document.getElementById('footer');
     this.content = null || document.getElementById('main_content');
@@ -30,6 +29,13 @@ class App {
   //   this.footer.innerHTML = footer;
   // }
 
+  addRoutes(...routes) {
+    routes.forEach((route) => {
+      const [link, value] = route;
+      this.routes[link] = value;
+    });
+  }
+
   route(request) {
     // Checks if ?redirent=___ is present in url
     // Attemps to load the respective page
@@ -50,11 +56,11 @@ class App {
     }
 
     // Display error page if not found
-    if (routes[page] === undefined) {
-      this.content.innerHTML = routes['/error'];
+    if (this.routes[page] === undefined) {
+      this.content.innerHTML = this.routes['/error'];
       document.title = 'Error';
     } else {
-      this.content.innerHTML = routes[page]; // Displays the page view
+      this.content.innerHTML = this.routes[page]; // Displays the page view
       App.setDocTitle(page);
     }
 
