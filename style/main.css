@@ -169,12 +169,13 @@ a, a:hover {
 
   .nav-link {
     display: inline;
-    padding: 17px 30px;
+    padding: 0 30px;
   }
 
   .nav-text {
     padding: 0;
     margin: 0;
+    line-height: 55px;
   }
 
   #main_content, #footer {
