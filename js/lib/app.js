@@ -46,7 +46,7 @@ class App {
     const menuElem = document.getElementById('menu');
 
     if (menuElem.classList.contains('change')) {
-      toggleMenu(menuElem);
+      App.toggleMenu(menuElem);
     }
 
     // Display error page if not found
