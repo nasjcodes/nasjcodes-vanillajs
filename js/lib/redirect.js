@@ -1,4 +1,4 @@
 'use strict';
 
-let url = window.location.pathname;
+const url = window.location.pathname;
 window.location = `/?redirect=${url}`;

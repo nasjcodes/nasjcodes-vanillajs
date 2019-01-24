@@ -28,7 +28,7 @@ class App {
   route(request) {
     // Checks if ?redirent=___ is present in url
     // Attemps to load the respective page
-    let urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('redirect')) {
       this.loadPage(urlParams.get('redirect'), true);
     } else {
@@ -38,7 +38,7 @@ class App {
 
   loadPage(page, isRedirect) {
     // Collapse nav bar
-    let menuElem = document.getElementById('menu');
+    const menuElem = document.getElementById('menu');
 
     if (menuElem.classList.contains('change')) {
       toggleMenu(menuElem);
@@ -63,7 +63,7 @@ class App {
 
   // Use static because 'this' is not used
   static setDocTitle(url) {
-    let pageName = url.substring(1);
+    const pageName = url.substring(1);
     let title = 'nasjcodes';
 
     if (url !== '') {
