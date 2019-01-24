@@ -8,7 +8,7 @@ Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to c
 I have listed down some of the main challenges and decisions I had to make while creating this website.
 
 ### Style (Updated 23 Jan 2019)
-I have styled the webpage from scratch without the help of Boostrap.
+I have styled the webpage from scratch without the help of Bootstrap.
 
 ~~Although CSS styling is relatively simple, I decided to make use of [Bootstrap](https://getbootstrap.com/) as a quick and easy way to style the site. This allowed me to focus more on the functional details of the site using JavaScript. In the future, I will style the website without the use of Bootstrap.~~
 
@@ -31,7 +31,7 @@ Given that the entire website is technically using only "/index.html", I needed 
 
 ## TO-DO
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
-* Possibly use the GitHub API to programatically get repository details.
+* Possibly use the GitHub API to programmatically get repository details.
 * Optimize loading times via lazy loading.
 * Add ability to jump to id (#) of page.
 * Add ability for links to have children (/projects/project1).
