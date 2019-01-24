@@ -1,8 +1,3 @@
-'use strict';
+import App from './lib/app.js';
 
 const app = new App();
-
-function toggleMenu(elem) {
-  elem.classList.toggle('change');
-  document.getElementById('navlinks').classList.toggle('change');
-}

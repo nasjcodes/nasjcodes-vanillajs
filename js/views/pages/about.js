@@ -1,4 +1,4 @@
-let about = /* html */`
+const about = /* html */`
   <header>
     <h1 id="title">About</h1>
   </header>
@@ -27,3 +27,5 @@ let about = /* html */`
 
   </main>
 `;
+
+export default about;

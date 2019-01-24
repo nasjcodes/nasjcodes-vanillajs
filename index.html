@@ -18,7 +18,7 @@
   <body>
     <!-- navbar -->
     <nav id="navbar">
-      <a class="nav-name" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
+      <a class="nav-name" href="/" onclick="route('/'); return false;">nasjcodes</a>
 
       <div id="menu" onclick="toggleMenu(this)">
         <div class="menu-line line1"></div>
@@ -28,10 +28,10 @@
 
 
       <div id="navlinks">
-        <a class="nav-link" href="/about" onclick="app.route('/about'); return false;">
+        <a class="nav-link" href="/about" onclick="route('/about'); return false;">
           <div class="nav-text">About</div>
         </a>
-        <a class="nav-link" href="/projects" onclick="app.route('/projects'); return false;">
+        <a class="nav-link" href="/projects" onclick="route('/projects'); return false;">
           <div class="nav-text">Projects</div>
         </a>
         <a class="nav-link" href="/wrongLink">
@@ -49,19 +49,7 @@
       &copynasjcodes
     </footer>
 
-    <!-- load components before main app -->
-    <script src="js/views/components/navbar.js"></script>
-    <script src="js/views/components/footer.js"></script>
-
-    <!-- pages -->
-    <script src="js/views/pages/home.js"></script>
-    <script src="js/views/pages/about.js"></script>
-    <script src="js/views/pages/projects.js"></script>
-    <script src="js/views/pages/error.js"></script>
-
-    <script src="js/lib/routes.js"></script>
-    <script src="js/lib/app.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 
   </body>
 </html>

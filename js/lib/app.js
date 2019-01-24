@@ -1,3 +1,5 @@
+import routes from './routes.js';
+
 class App {
   constructor() {
     this.navbar = null || document.getElementById('navbar');
@@ -16,6 +18,9 @@ class App {
     window.addEventListener('popstate', () => {
       this.loadPage(window.location.pathname, true);
     });
+
+    window.route = this.route.bind(this);
+    window.toggleMenu = App.toggleMenu;
   }
 
   // TODO: delete
@@ -46,7 +51,7 @@ class App {
 
     // Display error page if not found
     if (routes[page] === undefined) {
-      this.content.innerHTML = error;
+      this.content.innerHTML = routes['/error'];
       document.title = 'Error';
     } else {
       this.content.innerHTML = routes[page]; // Displays the page view
@@ -71,4 +76,11 @@ class App {
     }
     document.title = title;
   }
+
+  static toggleMenu(elem) {
+    elem.classList.toggle('change');
+    document.getElementById('navlinks').classList.toggle('change');
+  }
 }
+
+export default App;

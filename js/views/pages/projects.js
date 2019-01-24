@@ -1,4 +1,4 @@
-let projects = /* html */`
+const projects = /* html */`
   <header>
     <h1 id="title">Projects</h1>
   </header>
@@ -24,3 +24,5 @@ let projects = /* html */`
 
   </main>
 `;
+
+export default projects;
