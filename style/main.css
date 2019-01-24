@@ -81,26 +81,25 @@ main {
   transform: rotate(-90deg);
 }
 
-.change .nav-link {
-  display: inline;
+#navlinks.change {
+  height: 150px;
 }
 /* --------------- */
 
 #navlinks {
+  height: 0;
+  overflow: hidden;
   grid-column: 1 / 3;
   background-color: var(--bar-color);
-  z-index: 999999;
-}
-
-.nav-link {
-  display: none;
+  z-index: 0;
+  transition: 0.15s;
 }
 
 .nav-text {
   color: var(--nav-link-color);
   font-size: 18px;
   margin-left: 15px;
-  padding: 15px 0;
+  line-height: 50px;
 }
 
 .nav-link:hover > .nav-text {
@@ -163,6 +162,7 @@ a, a:hover {
   }
 
   #navlinks {
+    height: auto;
     display: flex;
     justify-content: center;
   }
