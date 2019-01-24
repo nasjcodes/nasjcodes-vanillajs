@@ -34,7 +34,8 @@ main {
   justify-self: start;
   color: white;
   font-size: 22px;
-  margin-left: 15px;
+  padding: 0 15px;
+  line-height: 55px;
 }
 
 /* Hamburger Button */
@@ -98,10 +99,11 @@ main {
 .nav-text {
   color: var(--nav-link-color);
   font-size: 18px;
-  padding: 15px;
+  margin-left: 15px;
+  padding: 15px 0;
 }
 
-.nav-text:hover {
+.nav-link:hover > .nav-text {
   color: var(--nav-link-hover);
 }
 
@@ -153,7 +155,7 @@ a, a:hover {
   }
 
   .nav-name {
-    padding: 0 25px;
+    padding: 0 30px;
   }
 
   #menu {
@@ -167,7 +169,12 @@ a, a:hover {
 
   .nav-link {
     display: inline;
-    padding: 0 25px;
+    padding: 17px 30px;
+  }
+
+  .nav-text {
+    padding: 0;
+    margin: 0;
   }
 
   #main_content, #footer {
@@ -179,10 +186,6 @@ a, a:hover {
 @media only screen and (min-width: 992px) {
   #navbar {
     justify-content: space-between;
-  }
-
-  .nav-link {
-    padding: 0 30px;
   }
 
   #main_content, #footer {
