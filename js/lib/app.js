@@ -1,3 +1,5 @@
+import toggleMenu from './togglemenu.js';
+
 class App {
   constructor() {
     this.routes = {};
@@ -18,8 +20,8 @@ class App {
       this.loadPage(window.location.pathname, true);
     });
 
+    // Allow links to call route() with 'this' context
     window.route = this.route.bind(this);
-    window.toggleMenu = App.toggleMenu;
   }
 
   // TODO: delete
@@ -52,7 +54,7 @@ class App {
     const menuElem = document.getElementById('menu');
 
     if (menuElem.classList.contains('change')) {
-      App.toggleMenu(menuElem);
+      toggleMenu(menuElem);
     }
 
     // Display error page if not found
@@ -81,11 +83,6 @@ class App {
       title += ` |  ${pageName}`;
     }
     document.title = title;
-  }
-
-  static toggleMenu(elem) {
-    elem.classList.toggle('change');
-    document.getElementById('navlinks').classList.toggle('change');
   }
 }
 

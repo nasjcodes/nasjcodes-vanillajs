@@ -6,6 +6,10 @@ import about from './views/pages/about.js';
 import projects from './views/pages/projects.js';
 import error from './views/pages/error.js';
 
+// Misc. functionality
+import toggleMenu from './lib/togglemenu.js';
+
+window.toggleMenu = toggleMenu;
 const app = new App();
 
 app.addRoutes(
