@@ -22,6 +22,7 @@ const contentHtml = /* html */`
 `;
 
 const projects = {
+  title: 'Projects',
   header: headerHtml,
   content: contentHtml,
   centerX: false,

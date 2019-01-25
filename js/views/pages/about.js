@@ -25,6 +25,7 @@ const contentHtml = /* html */`
 `;
 
 const about = {
+  title: 'About',
   header: headerHtml,
   content: contentHtml,
   centerX: false,

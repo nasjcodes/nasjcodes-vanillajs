@@ -7,6 +7,7 @@ const contentHtml = /* html */`
 `;
 
 const home = {
+  title: '',
   header: headerHtml,
   content: contentHtml,
   centerX: true,

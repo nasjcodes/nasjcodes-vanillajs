@@ -55,11 +55,11 @@ class App {
     if (this.routes[link] === undefined) {
       // Display error page if not found
       page = this.routes['/error'];
-      document.title = 'Error';
     } else {
       page = this.routes[link];
-      App.setDocTitle(link);
     }
+
+    App.setDocTitle(page.title);
 
     // Style properties
     page.centerX ? this.mainDiv.classList.add('center-x') : this.mainDiv.classList.remove('center-x');
@@ -89,8 +89,7 @@ class App {
   }
 
   // Use static because 'this' is not used
-  static setDocTitle(link) {
-    const pageName = link.substring(1);
+  static setDocTitle(pageName) {
     let title = 'nasjcodes';
 
     if (pageName !== '') {

@@ -7,6 +7,7 @@ const contentHtml = /* html */`
 `;
 
 const error = {
+  title: 'Error',
   header: headerHtml,
   content: contentHtml,
   centerX: true,
