@@ -106,7 +106,7 @@ ul {
 }
 
 header {
-  padding: 15px 0px;
+  padding-top: 15px;
 }
 
 #main_content, #footer {
@@ -124,6 +124,7 @@ header {
 #content {
   margin: 0 auto;
   width: 90%;
+  padding-bottom: 20px;
 }
 
 #main_content.center-x {
@@ -132,6 +133,10 @@ header {
 
 #main_content.center-y {
   justify-content: center;
+}
+
+.center-y #header, .center-y #content {
+  padding: 0;
 }
 
 footer {
