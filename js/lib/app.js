@@ -34,43 +34,59 @@ class App {
   }
 
   route(request) {
+    // Default to error page
+    let page = this.routes['/error'];
+    let link = request;
+    let isRedirect = false;
+
     // Checks if ?redirect=___ is present in url
-    // Attemps to load the respective page
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('redirect')) {
-      this.loadPage(urlParams.get('redirect'), true);
-    } else {
-      this.loadPage(request, false);
+      link = urlParams.get('redirect');
+      isRedirect = true;
     }
-  }
 
-  loadPage(link, isRedirect) {
-    App.collapseNavBar();
-    this.displayPage(link);
-    App.setUrl(link, isRedirect);
-  }
-
-  displayPage(link) {
-    let page;
-    if (this.routes[link] === undefined) {
-      // Display error page if not found
-      page = this.routes['/error'];
-    } else {
+    // Find page in routes
+    if (this.routes[link]) {
       page = this.routes[link];
     }
 
+    this.loadPage(page, link, isRedirect);
+  }
+
+  loadPage(page, link, isRedirect) {
+    App.collapseNavBar();
+    App.setUrl(link, isRedirect);
+    this.displayPage(page);
+  }
+
+  displayPage(page) {
     App.setDocTitle(page.title);
 
-    // Style properties
-    page.centerX ? this.mainDiv.classList.add('center-x') : this.mainDiv.classList.remove('center-x');
+    // Add/remove attributes to main div
+    if (page.centerX) {
+      this.addAttrib('center-x');
+    } else {
+      this.removeAttrib('center-x');
+    }
 
-    page.centerY ? this.mainDiv.classList.add('center-y') : this.mainDiv.classList.remove('center-y');
+    if (page.centerY) {
+      this.addAttrib('center-y');
+    } else {
+      this.removeAttrib('center-y');
+    }
 
+    // Display content
     this.header.innerHTML = page.header;
     this.content.innerHTML = page.content;
+  }
 
-    console.log(this.header);
-    console.log(page.header);
+  addAttrib(attrib) {
+    this.mainDiv.classList.add(attrib);
+  }
+
+  removeAttrib(attrib) {
+    this.mainDiv.classList.remove(attrib);
   }
 
   static collapseNavBar() {
