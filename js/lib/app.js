@@ -6,7 +6,8 @@ class App {
     // TODO: delete
     // this.navbar = document.getElementById('navbar');
     // this.footer = document.getElementById('footer');
-    this.content = document.getElementById('main_content');
+    this.title = document.getElementById('title');
+    this.content = document.getElementById('content');
 
     // Forward and back buttons
     window.addEventListener('popstate', () => {
@@ -49,14 +50,21 @@ class App {
   }
 
   displayPage(link) {
+    let page;
     if (this.routes[link] === undefined) {
       // Display error page if not found
-      this.content.innerHTML = this.routes['/error'];
+      page = this.routes['/error'];
       document.title = 'Error';
     } else {
-      this.content.innerHTML = this.routes[link];
+      page = this.routes[link];
       App.setDocTitle(link);
     }
+
+    this.title.innerHTML = page.title;
+    this.content.innerHTML = page.content;
+
+    console.log(this.title);
+    console.log(page.title);
   }
 
   static collapseNavBar() {

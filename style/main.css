@@ -13,11 +13,6 @@ body {
   --nav-link-hover: #f0f0f0;
 }
 
-main {
-  margin: 0 auto;
-  width: 90%;
-}
-
 #navbar {
   grid-area: navbar;
   display: grid;
@@ -119,14 +114,20 @@ header {
 }
 
 #main_content {
+  width: 100vw;
   grid-area: content;
   text-align: justify;
   margin: 0 auto;
 }
 
+#content {
+  margin: 0 auto;
+  width: 90%;
+}
+
 /* TODO: align main_content to center */
 .home {
-  text-align: center;
+  /* text-align: center; */
 }
 
 footer {
