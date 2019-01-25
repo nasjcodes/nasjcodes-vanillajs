@@ -125,9 +125,14 @@ header {
   width: 90%;
 }
 
-/* TODO: align main_content to center */
-.home {
-  /* text-align: center; */
+#main_content.center-x {
+  text-align: center;
+}
+
+#main_content.center-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer {

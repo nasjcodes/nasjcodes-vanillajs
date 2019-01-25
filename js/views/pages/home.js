@@ -1,4 +1,4 @@
-const titleHtml = /* html */`
+const headerHtml = /* html */`
   <h1>Hello.</h1>
 `;
 
@@ -7,8 +7,10 @@ const contentHtml = /* html */`
 `;
 
 const home = {
-  title: titleHtml,
+  header: headerHtml,
   content: contentHtml,
+  centerX: true,
+  centerY: true,
 };
 
 export default home;

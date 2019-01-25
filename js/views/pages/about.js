@@ -1,4 +1,4 @@
-const titleHtml = /* html */`
+const headerHtml = /* html */`
   <h1>About</h1>
 `;
 
@@ -25,8 +25,10 @@ const contentHtml = /* html */`
 `;
 
 const about = {
-  title: titleHtml,
+  header: headerHtml,
   content: contentHtml,
+  centerX: false,
+  centerY: false,
 };
 
 export default about;

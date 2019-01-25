@@ -6,7 +6,8 @@ class App {
     // TODO: delete
     // this.navbar = document.getElementById('navbar');
     // this.footer = document.getElementById('footer');
-    this.title = document.getElementById('title');
+    this.mainDiv = document.getElementById('main_content');
+    this.header = document.getElementById('header');
     this.content = document.getElementById('content');
 
     // Forward and back buttons
@@ -60,11 +61,16 @@ class App {
       App.setDocTitle(link);
     }
 
-    this.title.innerHTML = page.title;
+    // Style properties
+    page.centerX ? this.mainDiv.classList.add('center-x') : this.mainDiv.classList.remove('center-x');
+
+    page.centerY ? this.mainDiv.classList.add('center-y') : this.mainDiv.classList.remove('center-y');
+
+    this.header.innerHTML = page.header;
     this.content.innerHTML = page.content;
 
-    console.log(this.title);
-    console.log(page.title);
+    console.log(this.header);
+    console.log(page.header);
   }
 
   static collapseNavBar() {
