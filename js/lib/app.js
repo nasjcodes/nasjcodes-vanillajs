@@ -79,7 +79,7 @@ class App {
     const pageName = link.substring(1);
     let title = 'nasjcodes';
 
-    if (link !== '') {
+    if (pageName !== '') {
       title += ` |  ${pageName}`;
     }
     document.title = title;
