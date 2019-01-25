@@ -114,10 +114,11 @@ header {
 }
 
 #main_content {
-  width: 100vw;
   grid-area: content;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
   text-align: justify;
-  margin: 0 auto;
 }
 
 #content {
@@ -130,8 +131,6 @@ header {
 }
 
 #main_content.center-y {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
