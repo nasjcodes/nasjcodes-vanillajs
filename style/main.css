@@ -158,6 +158,12 @@ a, a:hover {
 /* Reference for device sizes taken from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* Medium devices */
 @media only screen and (min-width: 600px) {
+  html {
+    /* Prevents "jumping" elements when scrollbar appears */
+    width:100vw;
+    overflow-x:hidden;
+  }
+
   #navbar {
     display: flex;
     justify-content: center;
@@ -197,6 +203,10 @@ a, a:hover {
 @media only screen and (min-width: 992px) {
   #navbar {
     justify-content: space-between;
+  }
+
+  #navlinks {
+    padding-right: 20px;
   }
 
   #main_content, #footer {
