@@ -8,7 +8,7 @@ const contentHtml = /* html */`
       <h2 id="webdev">Web Development</h2>
       <ul>
         <li><h4><a href="https://github.com/nasjcodes/nasjcodes.github.io">nasjcodes.github.io (This website)</a></h4>
-          <p>A basic single page application made with Vanilla JavaScript & Bootstrap. Used to show and track my progress in Software Development.</p>
+          <p>A basic single page application made with Vanilla JavaScript. Used to show and track my progress in Software Development.</p>
         </li>
       </ul>
     </section>
