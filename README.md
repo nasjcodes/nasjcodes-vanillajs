@@ -4,11 +4,15 @@ This site is used to show and track my progress in Software Development. Click [
 ## Description
 Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to create a basic website as a platform to showcase my projects first. Based on my basic understanding of web development, most modern web sites are built using established frameworks such as React or Ruby on rails, Angular JS etc. However, creating a website using Vanilla JS as a learning experience is widely recommended to solidify one's understanding of the background processes.
 
+__Update 23 Jan 2019__:\
+After completing several tutorials and courses on HTML/CSS/JavaScript, I have refactored my code to be more in line with best practices.
+
 ## Challenges
 I have listed down some of the main challenges and decisions I had to make while creating this website.
 
-### Style (Updated 23 Jan 2019)
-I have styled the webpage from scratch without the help of Bootstrap.
+### Style
+__Update 23 Jan 2019__:\
+I have styled the webpage from scratch without the help of Bootstrap. Additionally, I have also included media queries to optimize the layout for mobile, tablet, and desktop devices.
 
 ~~Although CSS styling is relatively simple, I decided to make use of [Bootstrap](https://getbootstrap.com/) as a quick and easy way to style the site. This allowed me to focus more on the functional details of the site using JavaScript. In the future, I will style the website without the use of Bootstrap.~~
 
@@ -27,18 +31,17 @@ For my initial commit, I implemented site navigation using a hashchange event li
 After this, I found a seemingly better implementation of navigation using onclick. Each navigation link would call a function onclick and return false so that the browser does not direct to that link. This allowed the page to be loaded without changing the url. Browser history is added using window.history.pushState instead of window.history.replaceState.
 
 ### Redirects
-Given that the entire website is technically using only "/index.html", I needed a way to navigate back to "/index.html" even if the user inputs "/page_name" in the url. Since this input will give a page not found error, I created a [Custom 404.html page](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/). This page ran a simple script that took the pathname ("/page_name") entered by the user and redirects to the root with a search string containing the pathname ("/?redirect=page_name"). Using window.location.search, the correct page can be loaded after redirecting.
+Given that the entire website is technically using only "/index.html", I needed a way to navigate back to "/index.html" even if the user inputs "/page_name" in the url. Since this input will give a page not found error, I created a [Custom 404.html page](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/). This page runs a simple script that took the pathname ("/page_name") entered by the user and redirects to the root with a search string containing the pathname ("/?redirect=page_name"). Using window.location.search, the correct page can be loaded after redirecting.
 
 ## TO-DO
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
 * Possibly use the GitHub API to programmatically get repository details.
-* Optimize loading times via lazy loading.
-* Add ability to jump to id (#) of page.
+* Optimize loading times. Currently, all individual script files (modules) are loaded at the start. It is possible to minify and bundle these files for faster loading times. Alternatively, modules can be dynamically imported (limited browser support).
 * Add ability for links to have children (/projects/project1).
 * ~~Style website with my own CSS stylesheet instead of relying on Bootstrap.~~
 
 ## Resources
-I relied on 3 main pages as a reference for my SPA
-[1](https://github.com/FermiDirak/fermidirak.github.io) - Uses onclick for better navigation.
-[2](https://github.com/w3cj/front-end-face-off-vanilla-js) - Uses MVC concept and has a more robust implementation of page component loading. I can still reference this for more improvements.
-[3](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng) - Uses the async function to load pages on demand. I have not implemented this.
+I relied on 3 main pages as a reference for my SPA:\
+[1](https://github.com/FermiDirak/fermidirak.github.io) - Uses onclick for better navigation.\
+[2](https://github.com/w3cj/front-end-face-off-vanilla-js) - Uses MVC concept and has a more robust implementation of page component loading. I can still reference this for more improvements.\
+[3](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng) - Uses ES6 modules.
