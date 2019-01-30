@@ -14,9 +14,6 @@ class App {
     window.addEventListener('popstate', () => {
       this.loadPage(window.location.pathname, true);
     });
-
-    // Allow links to call route() with 'this' context
-    window.route = this.route.bind(this);
   }
 
   // TODO: delete

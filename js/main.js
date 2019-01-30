@@ -12,6 +12,10 @@ import toggleMenu from './lib/togglemenu.js';
 window.toggleMenu = toggleMenu;
 
 const app = new App();
+
+// Allow links to call route() function with 'app' context
+window.route = app.route.bind(app);
+
 app.addRoutes(
   ['/', home],
   ['/index.html', home],
