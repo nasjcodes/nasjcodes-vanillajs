@@ -33,6 +33,9 @@ After this, I found a seemingly better implementation of navigation using onclic
 ### Redirects
 Given that the entire website is technically using only "/index.html", I needed a way to navigate back to "/index.html" even if the user inputs "/page_name" in the url. Since this input will give a page not found error, I created a [Custom 404.html page](https://help.github.com/articles/creating-a-custom-404-page-for-your-github-pages-site/). This page runs a simple script that took the pathname ("/page_name") entered by the user and redirects to the root with a search string containing the pathname ("/?redirect=page_name"). Using window.location.search, the correct page can be loaded after redirecting.
 
+### Git commits
+When I first developed this website, my git commits were large with long intervals in between. From my understanding, this results in difficult-to-understand changes from a third-party perspective. As such, I have started the practice of commiting to git more frequently with small changes, allow a third-party to see more granular changes.
+
 ## TO-DO
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
 * Possibly use the GitHub API to programmatically get repository details.
