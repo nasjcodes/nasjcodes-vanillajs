@@ -1,6 +1,6 @@
 const headerHtml = /* html */`
   <h1>Hi, I'm Jian Sheng.</h1>
-  <p>Aspiring Web Developer.</p>
+  <p>Aspiring Software Developer.</p>
 `;
 
 const contentHtml = /* html */`
@@ -8,7 +8,7 @@ const contentHtml = /* html */`
 `;
 
 const home = {
-  title: 'Web Developer',
+  title: 'Software Developer',
   header: headerHtml,
   content: contentHtml,
   centerX: true,
