@@ -38,6 +38,7 @@ When I first developed this website, my git commits were large with long interva
 
 ## TO-DO
 * Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
+* Add freeCodeCamp projects.
 * Possibly use the GitHub API to programmatically get repository details.
 * Optimize loading times. Currently, all individual script files (modules) are loaded at the start. It is possible to minify and bundle these files for faster loading times. Alternatively, modules can be dynamically imported (limited browser support).
 * Add ability for links to have children (/projects/project1).
