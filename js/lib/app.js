@@ -106,7 +106,7 @@ class App {
 
   // Use static because 'this' is not used
   static setDocTitle(pageName) {
-    let title = 'nasjcodes';
+    let title = 'Jian Sheng';
 
     if (pageName !== '') {
       title += ` |  ${pageName}`;

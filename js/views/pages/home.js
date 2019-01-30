@@ -8,7 +8,7 @@ const contentHtml = /* html */`
 `;
 
 const home = {
-  title: '',
+  title: 'Web Developer',
   header: headerHtml,
   content: contentHtml,
   centerX: true,
