@@ -7,6 +7,20 @@ const contentHtml = /* html */`
     <p>This site is used to show and track my progress in Software Development.</p>
 
     <section>
+      <h2 id="web">Web</h2>
+      <p>To build a strong foundation in understand web programming, I decided to look at various resources following <a href="https://medium.com/zerotomastery/learn-to-code-in-2019-get-hired-and-have-fun-along-the-way-d4197f96be27">Andrei Neagoie's</a> "guide". With some basic understanding of web development, I have created this website using vanilla JS.</p>
+
+      <p>
+      As of 23 January 2019, I have completed the following comprehensive <a href="http://javascript.info/">javascript.info</a> tutorial. I have also completed the following<a href="https://www.freecodecamp.org/">freeCodeCamp</a> courses:</p>
+      <ul>
+        <li>Responsive Web Design</li>
+        <li>Javascript Algorithms and Data Structures</li>
+      </ul>
+
+      I plan continue learning HTML/CSS/JavaScript and hope to start making use of well established frameworks (e.g. React) soon.</p>
+    </section>
+
+    <section>
       <h2 id="java">Java</h2>
       <p>I started learning Java through the University of Helsinki's MOOC (Both <a href="http://moocfi.github.io/courses/2013/programming-part-1/">Part 1</a> and <a href="http://moocfi.github.io/courses/2013/programming-part-2/">Part 2</a>). This course has solidified my foundation in Object-Oriented Programming.</p>
     </section>
@@ -23,12 +37,7 @@ const contentHtml = /* html */`
       </ul>
     </section>
 
-    <section>
-      <h2 id="web">Web</h2>
-      <p>To build a strong foundation in understand web programming, I decided to look at various resources following <a href="https://medium.com/zerotomastery/learn-to-code-in-2019-get-hired-and-have-fun-along-the-way-d4197f96be27">Andrei Neagoie's</a> "guide". With some basic understanding of web development, I have created this website using vanilla JS and Bootstrap. I plan continue learning HTML/CSS/JavaScript and hope to start making use of well established frameworks (e.g. React) soon.</p>
-    </section>
-
-    <h4><a href="/projects" onclick="app.route('/projects'); return false;">View my projects</a></h4>
+    <h4><a href="/projects" onclick="route('/projects'); return false;">View my projects</a></h4>
 
   </article>
 `;
