@@ -101,10 +101,6 @@ body {
   color: var(--nav-link-hover);
 }
 
-ul {
-  padding-left: 0px;
-}
-
 header {
   padding-top: 15px;
 }
@@ -154,6 +150,17 @@ footer {
 a, a:hover {
   text-decoration: none;
 }
+
+/* Individual page styling */
+.inline {
+  display: inline;
+}
+
+#projects ul{
+  padding: 0;
+  list-style-position: inside;
+}
+/* --------------- */
 
 /* Reference for device sizes taken from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* Medium devices */
