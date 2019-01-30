@@ -156,9 +156,13 @@ a, a:hover {
   display: inline;
 }
 
-#projects ul{
+.list-inside{
   padding: 0;
   list-style-position: inside;
+}
+
+.list-outside {
+  list-style-position: outside;
 }
 /* --------------- */
 
