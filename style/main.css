@@ -1,3 +1,8 @@
+/* Sanitize.css uses cursor: default */
+html {
+  cursor: auto;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   display: grid;
