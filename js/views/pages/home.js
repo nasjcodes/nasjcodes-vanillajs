@@ -1,5 +1,5 @@
 const headerHtml = /* html */`
-  <h1 class="head-lg">Hi, I'm Jian Sheng.</h1>
+  <h1 class="head-lg">Hi, I'm Jian&nbspSheng.</h1>
   <p class="text-lg">Aspiring Software Developer.</p>
   <div>
     <a href="https://github.com/nasjcodes" class="link-inherit"><i class="fas fa-envelope-square fa-3x"></i></a>
