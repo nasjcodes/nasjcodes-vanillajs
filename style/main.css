@@ -90,6 +90,10 @@ body {
   transition: 0.15s;
 }
 
+.nav-home {
+  display: none;
+}
+
 .nav-text {
   color: var(--nav-link-color);
   font-size: 18px;
@@ -180,11 +184,7 @@ a, a:hover {
     justify-content: center;
   }
 
-  .nav-name {
-    padding: 0 30px;
-  }
-
-  #menu {
+  .nav-name, #menu {
     display: none;
   }
 
@@ -194,8 +194,11 @@ a, a:hover {
     justify-content: center;
   }
 
-  .nav-link {
+  .nav-home {
     display: inline;
+  }
+
+  .nav-link {
     padding: 0 30px;
   }
 
@@ -214,6 +217,11 @@ a, a:hover {
 @media only screen and (min-width: 992px) {
   #navbar {
     justify-content: space-between;
+  }
+
+  .nav-name {
+    display: inline;
+    padding: 0 30px;
   }
 
   #navlinks {
