@@ -179,9 +179,6 @@ a, a:hover {
   list-style-position: inside;
 }
 
-.list-outside {
-  list-style-position: outside;
-}
 /* --------------- */
 
 /* Reference for device sizes taken from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */

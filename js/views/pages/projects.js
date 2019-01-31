@@ -20,12 +20,12 @@ const contentHtml = /* html */`
           <p>A non-profit community that has courses on coding. I have completed the following projects:</p>
 
           <h4 class="inline"><a href="https://www.freecodecamp.org/certification/nasjcodes/responsive-web-design" class ="link-inherit ext-link">Responsive Web Design</a></h4>
-          <ul class="list-outside">
-            <li><a href="https://codepen.io/nasjcodes/full/XoqeOy">Tribute Page</a></li>
-            <li><a href="https://codepen.io/nasjcodes/full/maLqgp">Survey Form</a></li>
-            <li><a href="https://codepen.io/nasjcodes/full/jXKOzv">Product Landing Page</a></li>
-            <li><a href="https://codepen.io/nasjcodes/full/NezpLZ">Technical Documentation Page</a></li>
-            <li><a href="https://codepen.io/nasjcodes/full/qLKjae">Personal Portfolio Webpage</a></li>
+          <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://codepen.io/nasjcodes/full/XoqeOy">Tribute Page</a></li>
+            <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://codepen.io/nasjcodes/full/maLqgp">Survey Form</a></li>
+            <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://codepen.io/nasjcodes/full/jXKOzv">Product Landing Page</a></li>
+            <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://codepen.io/nasjcodes/full/NezpLZ">Technical Documentation Page</a></li>
+            <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://codepen.io/nasjcodes/full/qLKjae">Personal Portfolio Webpage</a></li>
           </ul>
 
           <h4><a href="https://www.freecodecamp.org/certification/nasjcodes/javascript-algorithms-and-data-structures" class ="link-inherit ext-link">JavaScript Algorithms and Data Structures</a></h4>

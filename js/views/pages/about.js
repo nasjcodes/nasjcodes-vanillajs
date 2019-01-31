@@ -12,9 +12,9 @@ const contentHtml = /* html */`
 
       <p>
       As of 23 January 2019, I have completed the following comprehensive <a href="http://javascript.info/">javascript.info</a> tutorial. I have also completed the following <a href="https://www.freecodecamp.org/">freeCodeCamp</a> courses:</p>
-      <ul>
-        <li>Responsive Web Design</li>
-        <li>Javascript Algorithms and Data Structures</li>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://www.freecodecamp.org/certification/nasjcodes/responsive-web-design">Responsive Web Design</a></li>
+        <li><span class="fa-li"><i class="fas fa-link"></i></span><a href="https://www.freecodecamp.org/certification/nasjcodes/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></li>
       </ul>
 
       I plan continue learning HTML/CSS/JavaScript and hope to start making use of well established frameworks (e.g. React) soon.</p>
