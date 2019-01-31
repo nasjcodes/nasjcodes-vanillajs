@@ -152,12 +152,21 @@ footer {
   color: #969696;
 }
 
-#projects a, #projects a:hover, #projects a:visited {
+.link-inherit, .link-inherit:hover, .link-inherit:visited {
   color: inherit;
 }
 
 a, a:hover {
   text-decoration: none;
+}
+
+/* External link icons */
+.ext-link::after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.7em;
+  padding-left: 0.5em;
 }
 
 /* Individual page styling */
