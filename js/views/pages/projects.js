@@ -6,8 +6,8 @@ const contentHtml = /* html */`
   <article id="projects">
     <section>
       <h2 id="webdev">Web Development</h2>
-      <ul class="list-inside">
 
+      <ul class="list-inside">
         <li>
           <h3 class="inline"><a href="https://github.com/nasjcodes/nasjcodes.github.io">nasjcodes.github.io (This
               website)</a></h3>
@@ -29,20 +29,20 @@ const contentHtml = /* html */`
           </ul>
 
           <h4><a href="https://www.freecodecamp.org/certification/nasjcodes/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures</a></h4>
-
         </li>
-
       </ul>
     </section>
 
     <section>
       <h2 id="android">Android</h2>
-      <ul>
+
+      <ul class="list-inside">
         <li>
           <h3 class="inline"><a href="https://github.com/nasjcodes/android-quotebook">QuoteBook</a></h3>
           <p>Quotebook is a basic Android application that loops through a list of quotes. I mostly followed <a href="https://www.reddit.com/r/Android/comments/2tpjep/the_new_step_by_step_guide_detailing_how_to_get/">this</a>
             reddit thread.</p>
         </li>
+
         <li>
           <h3 class="inline"><a href="https://github.com/nasjcodes/snake-mobile">Snake Mobile</a></h3>
           <p>To better understand the interactions and functions of Android compared to Java, I decided to port the <a
