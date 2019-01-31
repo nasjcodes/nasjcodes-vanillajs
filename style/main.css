@@ -170,6 +170,14 @@ a, a:hover {
 }
 
 /* Individual page styling */
+.head-lg {
+  font-size: 3em;
+}
+
+.text-lg {
+  font-size: 1.5em;
+}
+
 .inline {
   display: inline;
 }
