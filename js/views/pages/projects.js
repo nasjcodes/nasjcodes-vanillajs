@@ -5,7 +5,7 @@ const headerHtml = /* html */`
 const contentHtml = /* html */`
   <article id="projects">
     <section>
-      <h2 id="webdev">Web Development</h2>
+      <h2 id="webdev"><i class="fas fa-code"></i> Web Development</h2>
 
       <ul class="list-inside">
         <li>
@@ -34,7 +34,7 @@ const contentHtml = /* html */`
     </section>
 
     <section>
-      <h2 id="android">Android</h2>
+      <h2 id="android"><i class="fab fa-android"></i> Android</h2>
 
       <ul class="list-inside">
         <li>
