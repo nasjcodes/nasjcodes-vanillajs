@@ -17,8 +17,9 @@ const contentHtml = /* html */`
       <h2>My Progress</h2>
       <p>The following are some major milestones in my learning journey as a developer.</p>
 
-      <ul class="list-inside">
+      <ul class="fa-ul list-inside">
         <li>
+          <span><i class="fas fa-code"></i><span>
           <h3 id="web" class="inline">Web</h3>
           <p>
             To build a strong foundation in understand web programming, I decided to look at various resources following
@@ -47,6 +48,7 @@ const contentHtml = /* html */`
         </li>
 
         <li>
+          <span><i class="fab fa-java fa-lg"></i></span>
           <h3 id="java" class="inline">Java</h3>
           <p>
             I started learning Java through the University of Helsinki's MOOC (Both <a href="http://moocfi.github.io/courses/2013/programming-part-1/">Part1</a>
@@ -56,6 +58,7 @@ const contentHtml = /* html */`
         </li>
 
         <li>
+          <span><i class="fab fa-android fa-lg"></i></span>
           <h3 id="android" class="inline">Android</h3>
           <p>
             I have (only) made 2 Android applications so far, and obviously have a lot more to learn. However, these are
