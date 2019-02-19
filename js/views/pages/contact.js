@@ -59,7 +59,7 @@ const contact = {
   header: headerHtml,
   content: contentHtml,
   centerX: true,
-  centerY: false,
+  centerY: true,
 };
 
 export default contact;
