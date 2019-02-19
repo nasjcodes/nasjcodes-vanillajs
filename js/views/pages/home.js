@@ -17,6 +17,12 @@ const contentHtml = /* html */`
       <i class="fab fa-linkedin fa-3x icon-row" aria-hidden="true" title="LinkedIn"></i>
     </a>
   </div>
+
+  <a href="/res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
+    <div class="button">
+      <span class="link-inherit">Résumé</span>
+    </div>
+  </a>
 `;
 
 const home = {
