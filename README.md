@@ -37,11 +37,11 @@ Given that the entire website is technically using only "/index.html", I needed 
 When I first developed this website, my git commits were large with long intervals in between. From my understanding, this results in difficult-to-understand changes from a third-party perspective. As such, I have started the practice of commiting to git more frequently with small changes, allow a third-party to see more granular changes.
 
 ## TO-DO
-* Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.
 * Style projects to be more visually pleasing.
 * Possibly use the GitHub API to programmatically get repository details.
 * Optimize loading times. Currently, all individual script files (modules) are loaded at the start. It is possible to minify and bundle these files for faster loading times. Alternatively, modules can be dynamically imported (limited browser support).
 * Add ability for links to have children (/projects/project1).
+* ~~Add my resume, about myself, and contact details. This page will be used as my portfolio landing page.~~
 * ~~Add freeCodeCamp projects.~~
 * ~~Style website with my own CSS stylesheet instead of relying on Bootstrap.~~
 
