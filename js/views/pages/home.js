@@ -3,15 +3,15 @@ const headerHtml = /* html */`
   <p class="text-lg">Aspiring Software Developer.</p>
   <div>
     <a href="mailto:nasjcodes@outlook.com" class="link-inherit" aria-label="Email">
-      <i class="fas fa-envelope-square fa-3x" aria-hidden="true" title="Email"></i>
+      <i class="fas fa-envelope-square fa-3x icon-row" aria-hidden="true" title="Email"></i>
     </a>
 
     <a href="https://github.com/nasjcodes" class="link-inherit" aria-label="GitHub" target="_blank">
-      <i class="fab fa-github-square fa-3x" aria-hidden="true" title="Github"></i>
+      <i class="fab fa-github-square fa-3x icon-row" aria-hidden="true" title="Github"></i>
     </a>
 
     <a href="https://www.linkedin.com/in/jiansheng/" class="link-inherit" aria-label="LinkedIn" target="_blank">
-      <i class="fab fa-linkedin fa-3x" aria-hidden="true" title="LinkedIn"></i>
+      <i class="fab fa-linkedin fa-3x icon-row" aria-hidden="true" title="LinkedIn"></i>
     </a>
   </div>
 `;

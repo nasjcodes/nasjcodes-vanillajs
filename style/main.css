@@ -188,6 +188,10 @@ a, a:hover {
   list-style-position: inside;
 }
 
+.icon-row {
+  padding: 0 5px;
+}
+
 /* --------------- */
 
 /* Reference for device sizes taken from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
