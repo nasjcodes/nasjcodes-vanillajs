@@ -11,6 +11,12 @@ const contentHtml = /* html */`
         programmer with a degree in Mechanical Engineering from the National University of Singapore. My current goal is
         to get hired as a software engineer in web/android development.
       </p>
+
+    <a href="/res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
+      <div class="button">
+        <span class="link-inherit">View my résumé</span>
+      </div>
+    </a>
     </section>
 
     <section>
@@ -79,7 +85,13 @@ const contentHtml = /* html */`
       </ul>
     </section>
 
-    <h4><a href="/projects" onclick="route('/projects'); return false;">View my projects</a></h4>
+    <br>
+
+    <a href="/projects" onclick="route('/projects'); return false;">
+      <div class="button">
+        <span class="link-inherit">View my projects</span>
+      </div>
+    </a>
 
   </article>
 `;
