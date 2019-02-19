@@ -1,6 +1,9 @@
 const headerHtml = /* html */`
   <h1 class="head-lg">Hi, I'm Jian&nbspSheng.</h1>
-  <p class="text-lg">Aspiring Software Developer.</p>
+  <p class="text-lg">Aspiring Software Developer</p>
+`;
+
+const contentHtml = /* html */`
   <div>
     <a href="mailto:nasjcodes@outlook.com" class="link-inherit" aria-label="Email">
       <i class="fas fa-envelope-square fa-3x icon-row" aria-hidden="true" title="Email"></i>
@@ -14,10 +17,6 @@ const headerHtml = /* html */`
       <i class="fab fa-linkedin fa-3x icon-row" aria-hidden="true" title="LinkedIn"></i>
     </a>
   </div>
-`;
-
-const contentHtml = /* html */`
-
 `;
 
 const home = {

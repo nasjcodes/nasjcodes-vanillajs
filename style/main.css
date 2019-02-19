@@ -172,10 +172,12 @@ a, a:hover {
 /* Individual page styling */
 .head-lg {
   font-size: 3em;
+  margin-bottom: 10px;
 }
 
 .text-lg {
   font-size: 1.5em;
+  margin-top: 0;
 }
 
 .inline {
