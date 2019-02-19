@@ -2,7 +2,7 @@ const headerHtml = /* html */`
   <h1 class="head-lg">Hi, I'm Jian&nbspSheng.</h1>
   <p class="text-lg">Aspiring Software Developer.</p>
   <div>
-    <a href="https://github.com/nasjcodes" class="link-inherit" aria-label="Email" target="_blank">
+    <a href="mailto:nasjcodes@outlook.com" class="link-inherit" aria-label="Email">
       <i class="fas fa-envelope-square fa-3x" aria-hidden="true" title="Email"></i>
     </a>
 
@@ -10,7 +10,7 @@ const headerHtml = /* html */`
       <i class="fab fa-github-square fa-3x" aria-hidden="true" title="Github"></i>
     </a>
 
-    <a href="https://github.com/nasjcodes" class="link-inherit" aria-label="LinkedIn" target="_blank">
+    <a href="https://www.linkedin.com/in/jiansheng/" class="link-inherit" aria-label="LinkedIn" target="_blank">
       <i class="fab fa-linkedin fa-3x" aria-hidden="true" title="LinkedIn"></i>
     </a>
   </div>
