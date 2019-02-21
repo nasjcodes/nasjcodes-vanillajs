@@ -149,7 +149,10 @@ footer {
   grid-area: footer;
   background-color: var(--bar-color);
   width: 100%;
-  line-height: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #969696;
 }
 
