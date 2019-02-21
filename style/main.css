@@ -191,6 +191,10 @@ a, a:hover {
   list-style-position: inside;
 }
 
+.list-default {
+  list-style-position: initial;
+}
+
 .icon-row {
   margin: 5px;
 }

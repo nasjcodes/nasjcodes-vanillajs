@@ -70,7 +70,7 @@ const contentHtml = /* html */`
             I have (only) made 2 Android applications so far, and obviously have a lot more to learn. However, these are
             some things that I noted to improve on based on the 2 applications:
           </p>
-          <ul>
+          <ul class="list-default">
             <li>Themes/Styles/Layouts. I have been using the default themes and styles for both applications. I could
               probably learn to get a consistent theme throughout the application, as well as programmatically generate
               layouts.</li>
