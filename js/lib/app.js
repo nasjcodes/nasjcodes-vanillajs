@@ -54,6 +54,7 @@ class App {
   }
 
   loadPage(page, link, isRedirect) {
+    window.scrollTo(0, 0);
     App.collapseNavBar();
     App.setUrl(link, isRedirect);
     this.displayPage(page);
