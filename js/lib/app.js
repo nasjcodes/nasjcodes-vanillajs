@@ -12,7 +12,9 @@ class App {
 
     // Forward and back buttons
     window.addEventListener('popstate', () => {
-      this.loadPage(window.location.pathname, true);
+      const link = window.location.pathname;
+      const page = this.routes[link];
+      this.loadPage(page, link, true);
     });
   }
 
