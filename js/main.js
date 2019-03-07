@@ -21,6 +21,11 @@ const app = new App();
 // Allow links to call route() function with 'app' context
 window.route = app.route.bind(app);
 
+app.addComponents({
+  navbar,
+  footer,
+});
+
 app.addRoutes({
   '/': home,
   '/index.html': home,
@@ -28,11 +33,6 @@ app.addRoutes({
   '/projects': projects,
   '/contact': contact,
   '/error': error,
-});
-
-app.addComponents({
-  navbar,
-  footer,
 });
 
 // Load components and content once DOM is loaded
