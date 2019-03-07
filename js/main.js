@@ -1,5 +1,9 @@
 import App from './lib/app.js';
 
+// Components
+import navbar from './views/components/navbar.js';
+import footer from './views/components/footer.js';
+
 // Pages
 import home from './views/pages/home.js';
 import about from './views/pages/about.js';
@@ -26,5 +30,12 @@ app.addRoutes({
   '/error': error,
 });
 
-// Load content once DOM is loaded
+app.addComponents({
+  navbar,
+  footer,
+});
+
+// Load components and content once DOM is loaded
+app.loadComponents();
+//document.addEventListener('DOMContentLoaded', app.loadComponents);
 document.addEventListener('DOMContentLoaded', app.route.call(app, window.location.pathname));

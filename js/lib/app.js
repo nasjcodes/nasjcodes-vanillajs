@@ -3,9 +3,9 @@ import toggleMenu from './togglemenu.js';
 class App {
   constructor() {
     this.routes = {};
-    // TODO: delete
-    // this.navbar = document.getElementById('navbar');
-    // this.footer = document.getElementById('footer');
+    this.components = {};
+    this.navbar = document.getElementById('navbar');
+    this.footer = document.getElementById('footer');
     this.mainDiv = document.getElementById('main_content');
     this.header = document.getElementById('header');
     this.content = document.getElementById('content');
@@ -18,15 +18,18 @@ class App {
     });
   }
 
-  // TODO: delete
   // Render navbar and footer
-  // loadComponents() {
-  //   this.navbar.innerHTML = navbar;
-  //   this.footer.innerHTML = footer;
-  // }
+  loadComponents() {
+    this.navbar.innerHTML = this.components.navbar;
+    this.footer.innerHTML = this.components.footer;
+  }
 
   addRoutes(routes) {
     this.routes = routes;
+  }
+
+  addComponents(components) {
+    this.components = components;
   }
 
   route(request) {

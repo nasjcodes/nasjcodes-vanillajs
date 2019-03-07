@@ -1,24 +1,29 @@
 // CURRENTLY UNUSED
 
-let navbar = /* html */`
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="/" onclick="app.route('/'); return false;">nasjcodes</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+const navbar = /* html */`
+  <a class="nav-name" href="/" onclick="route('/'); return false;">nasjcodes</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/about" onclick="app.route('/about'); return false;">About<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/projects" onclick="app.route('/projects'); return false;">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="/wrongLink">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="menu" onclick="toggleMenu(this)">
+    <div class="menu-line line1"></div>
+    <div class="menu-line line2"></div>
+    <div class="menu-line line3"></div>
+  </div>
+
+
+  <div id="navlinks">
+    <a class="nav-link nav-home" href="/" onclick="route('/'); return false;">
+      <div class="nav-text">Home</div>
+    </a>
+    <a class="nav-link" href="/about" onclick="route('/about'); return false;">
+      <div class="nav-text">About</div>
+    </a>
+    <a class="nav-link" href="/projects" onclick="route('/projects'); return false;">
+      <div class="nav-text">Projects</div>
+    </a>
+    <a class="nav-link" href="/contact" onclick="route('/contact'); return false;">
+      <div class="nav-text">Contact</div>
+    </a>
+  </div>
 `;
+
+export default navbar;
