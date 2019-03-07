@@ -47,7 +47,7 @@ class App {
     // Checks if ?redirect=___ is present in url
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has('redirect')) {
-      link = urlParams.get('redirect');
+      [link] = urlParams.get('redirect').split('/');
       isRedirect = true;
     }
 
