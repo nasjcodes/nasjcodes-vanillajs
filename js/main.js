@@ -18,6 +18,10 @@ window.toggleMenu = toggleMenu;
 
 const app = new App();
 
+// base set here MUST be the same as in redirect.js
+const base = '';
+app.setBase(base);
+
 app.addComponents({
   navbar,
   footer,

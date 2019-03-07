@@ -1,5 +1,3 @@
-// CURRENTLY UNUSED
-
 const footer = /* html */`
   <div>
     nasjcodes &copy 2019

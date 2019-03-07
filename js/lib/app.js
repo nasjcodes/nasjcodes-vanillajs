@@ -2,6 +2,7 @@ import toggleMenu from './togglemenu.js';
 
 class App {
   constructor() {
+    this.base = '';
     this.routes = {};
     this.components = {};
     this.navbar = document.getElementById('navbar');
@@ -12,7 +13,7 @@ class App {
 
     // Forward and back buttons
     window.addEventListener('popstate', () => {
-      const link = window.location.pathname;
+      const link = window.location.pathname.slice(this.base.length);
       const page = this.routes[link];
       this.loadPage(page, link, true);
     });
@@ -22,6 +23,10 @@ class App {
   loadComponents() {
     this.navbar.innerHTML = this.components.navbar;
     this.footer.innerHTML = this.components.footer;
+  }
+
+  setBase(base) {
+    this.base = base;
   }
 
   addRoutes(routes) {
@@ -56,7 +61,7 @@ class App {
   loadPage(page, link, isRedirect) {
     window.scrollTo(0, 0);
     App.collapseNavBar();
-    App.setUrl(link, isRedirect);
+    App.setUrl(`${this.base}${link}`, isRedirect);
     this.displayPage(page);
   }
 

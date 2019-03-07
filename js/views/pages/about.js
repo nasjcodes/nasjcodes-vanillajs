@@ -12,7 +12,7 @@ const contentHtml = /* html */`
         to get hired as a software engineer in web/android development.
       </p>
 
-    <a href="/res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
+    <a href="res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
       <div class="button">
         <span class="link-inherit">View my résumé</span>
       </div>
@@ -87,7 +87,7 @@ const contentHtml = /* html */`
 
     <br>
 
-    <a href="/projects" onclick="route('/projects'); return false;">
+    <a href="projects" onclick="route('/projects'); return false;">
       <div class="button">
         <span class="link-inherit">View my projects</span>
       </div>

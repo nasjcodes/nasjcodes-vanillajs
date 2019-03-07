@@ -5,13 +5,13 @@ const headerHtml = /* html */`
 
 const contentHtml = /* html */`
   <div class="flex-container">
-    <a href="/res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
+    <a href="res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
       <div class="button">
         <span class="link-inherit">Résumé</span>
       </div>
     </a>
 
-    <a href="/contact" onclick="route('/contact'); return false;">
+    <a href="contact" onclick="route('/contact'); return false;">
         <div class="button">
           <span class="link-inherit">Contact</span>
         </div>

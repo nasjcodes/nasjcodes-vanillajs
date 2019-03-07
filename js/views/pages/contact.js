@@ -28,7 +28,7 @@ const contentHtml = /* html */`
         </div>
       </a>
 
-      <a href="/res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
+      <a href="res/Resume_Ang-Jian-Sheng.pdf" target="_blank">
         <div class="button">
           <i class="fas fa-file"></i>
           <span class="link-inherit">Résumé</span>
