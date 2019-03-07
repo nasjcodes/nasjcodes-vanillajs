@@ -17,14 +17,14 @@ const app = new App();
 // Allow links to call route() function with 'app' context
 window.route = app.route.bind(app);
 
-app.addRoutes(
-  ['/', home],
-  ['/index.html', home],
-  ['/about', about],
-  ['/projects', projects],
-  ['/contact', contact],
-  ['/error', error],
-);
+app.addRoutes({
+  '/': home,
+  '/index.html': home,
+  '/about': about,
+  '/projects': projects,
+  '/contact': contact,
+  '/error': error,
+});
 
 // Load content once DOM is loaded
 document.addEventListener('DOMContentLoaded', app.route.call(app, window.location.pathname));

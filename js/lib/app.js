@@ -25,11 +25,8 @@ class App {
   //   this.footer.innerHTML = footer;
   // }
 
-  addRoutes(...routes) {
-    routes.forEach((route) => {
-      const [link, value] = route;
-      this.routes[link] = value;
-    });
+  addRoutes(routes) {
+    this.routes = routes;
   }
 
   route(request) {
