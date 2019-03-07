@@ -36,9 +36,7 @@ app.addComponents({
 });
 
 // Load components and content once DOM is loaded
-document.addEventListener('DOMContentLoaded', loadInitial);
-
-function loadInitial() {
+document.addEventListener('DOMContentLoaded', () => {
   app.loadComponents();
   app.route(window.location.pathname);
-}
+});
