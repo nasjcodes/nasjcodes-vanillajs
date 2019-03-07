@@ -18,9 +18,6 @@ window.toggleMenu = toggleMenu;
 
 const app = new App();
 
-// Allow links to call route() function with 'app' context
-window.route = app.route.bind(app);
-
 app.addComponents({
   navbar,
   footer,
@@ -35,8 +32,11 @@ app.addRoutes({
   '/error': error,
 });
 
+// Allow links to call route() function with 'app' context
+window.route = app.route.bind(app);
+
 // Load components and content once DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   app.loadComponents();
-  app.route(window.location.pathname);
+  app.route('/');
 });
