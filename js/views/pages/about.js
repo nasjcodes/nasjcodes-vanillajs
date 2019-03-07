@@ -87,7 +87,7 @@ const contentHtml = /* html */`
 
     <br>
 
-    <a href="projects" onclick="route('/projects'); return false;">
+    <a href="projects" onclick="route('projects'); return false;">
       <div class="button">
         <span class="link-inherit">View my projects</span>
       </div>

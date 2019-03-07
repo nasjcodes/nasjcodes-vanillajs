@@ -13,9 +13,10 @@ class App {
 
     // Forward and back buttons
     window.addEventListener('popstate', () => {
-      const link = window.location.pathname.slice(this.base.length);
-      const page = this.routes[link];
-      this.loadPage(page, link, true);
+      const link = window.location.pathname.slice(this.base.length + 1);
+      this.route(link);
+      // const page = this.routes[link];
+      // this.loadPage(page, link, true);
     });
   }
 
@@ -39,8 +40,8 @@ class App {
 
   route(request) {
     // Default to error page
-    let page = this.routes['/error'];
-    let link = request;
+    let page = this.routes.error;
+    let link = request || 'home';
     let isRedirect = false;
 
     // Checks if ?redirect=___ is present in url
@@ -61,7 +62,7 @@ class App {
   loadPage(page, link, isRedirect) {
     window.scrollTo(0, 0);
     App.collapseNavBar();
-    App.setUrl(`${this.base}${link}`, isRedirect);
+    this.setUrl(link, isRedirect);
     this.displayPage(page);
   }
 
@@ -101,11 +102,13 @@ class App {
     }
   }
 
-  static setUrl(link, isRedirect) {
-    if (isRedirect || window.location.pathname === link) {
-      window.history.replaceState({}, '', link);
+  setUrl(link, isRedirect) {
+    const url = `${this.base}/${link === 'home' ? '' : link}`;
+
+    if (isRedirect || window.location.pathname === url) {
+      window.history.replaceState({}, '', url);
     } else {
-      window.history.pushState({}, '', link);
+      window.history.pushState({}, '', url);
     }
   }
 

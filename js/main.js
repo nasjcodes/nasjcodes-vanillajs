@@ -28,12 +28,12 @@ app.addComponents({
 });
 
 app.addRoutes({
-  '/': home,
-  '/index.html': home,
-  '/about': about,
-  '/projects': projects,
-  '/contact': contact,
-  '/error': error,
+  'index.html': home,
+  home,
+  about,
+  projects,
+  contact,
+  error,
 });
 
 // Allow links to call route() function with 'app' context
@@ -42,5 +42,5 @@ window.route = app.route.bind(app);
 // Load components and content once DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   app.loadComponents();
-  app.route('/');
+  app.route('');
 });

@@ -11,7 +11,7 @@ const contentHtml = /* html */`
       </div>
     </a>
 
-    <a href="contact" onclick="route('/contact'); return false;">
+    <a href="contact" onclick="route('contact'); return false;">
         <div class="button">
           <span class="link-inherit">Contact</span>
         </div>
