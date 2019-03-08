@@ -19,7 +19,7 @@ window.toggleMenu = toggleMenu;
 const app = new App();
 
 // base set here MUST be the same as in redirect.js
-const base = '';
+const base = '/nasjcodes-vanillajs';
 app.setBase(base);
 
 app.addComponents({
