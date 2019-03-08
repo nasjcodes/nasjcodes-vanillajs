@@ -1,6 +1,9 @@
 # nasjcodes.github.io
 This site is used to show and track my progress in Software Development. Click [here](https://nasjcodes.github.io) to check it out!
 
+## Issues
+Redirects do not work for this page as Github pages uses https://nasjcodes.github.io/404.html for the custom 404 page instead of https://nasjcodes.github.io/<repo>/404.html.
+
 ## Description
 Before delving further into HTML/CSS/JavaScript and JS frameworks, I wanted to create a basic website as a platform to showcase my projects first. Based on my basic understanding of web development, most modern web sites are built using established frameworks such as React or Ruby on rails, Angular JS etc. However, creating a website using Vanilla JS as a learning experience is widely recommended to solidify one's understanding of the background processes.
 
